@@ -39,11 +39,11 @@ class MakeupContainer extends React.Component{
                 }
 
                 {
-                    (!isFetch && !makeups.length) && "No makeup founded, try another search"
+                    (!isFetch && !makeups?.length) && "No makeup founded, try another search"
                 }
                 <section className="makeups-container">
                     {
-                        makeups.map((makeup)=> <Makeup 
+                        makeups?.map((makeup)=> <Makeup 
                             imageUrl={makeup.image_link} 
                             name={makeup.name} 
                             key={makeup.id}
